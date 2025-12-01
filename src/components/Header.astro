@@ -2,48 +2,60 @@
 import SocialLink from "./SocialLink.astro";
 ---
 
-<header class="space-y-4 md:space-y-8 px-3 md:px-0">
+<header class="space-y-4 md:space-y-8 px-3 md:px-0" role="banner">
   <div>
     <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-3">
       John Sumner
     </h1>
-    <h2 class="text-lg font-medium tracking-tight mb-4">
-      Full-Stack Developer
-    </h2>
+    <p class="text-lg font-medium tracking-tight mb-4">Full-Stack Developer</p>
     <p class="text max-w-sm leading-relaxed">
       Building modern web applications with a focus on performance and
       accessibility.
     </p>
   </div>
 
-  <div class="flex gap-4 items-center">
-    <SocialLink
-      href="https://github.com/jsumnerp"
-      label="GitHub"
-      icon="github"
-    />
-    <SocialLink
-      href="https://linkedin.com/in/jsumner1992"
-      label="LinkedIn"
-      icon="linkedin"
-    />
-  </div>
+  <nav aria-label="Social media links">
+    <ul class="flex gap-4 items-center list-none p-0 m-0">
+      <li>
+        <SocialLink
+          href="https://github.com/jsumnerp"
+          label="GitHub"
+          icon="github"
+        />
+      </li>
+      <li>
+        <SocialLink
+          href="https://linkedin.com/in/jsumner1992"
+          label="LinkedIn"
+          icon="linkedin"
+        />
+      </li>
+    </ul>
+  </nav>
 
-  <a
-    href="/resume.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="inline-flex items-center gap-2 font-medium underline hover:no-underline transition-all"
-    aria-label="View resume"
-  >
-    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-      ></path>
-    </svg>
-    View Resume
-  </a>
+  <div>
+    <a
+      href="/resume.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-2 font-medium underline hover:no-underline transition-all focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background rounded"
+      aria-label="View resume (opens in new tab, PDF document)"
+    >
+      <svg
+        class="w-5 h-5"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+        ></path>
+      </svg>
+      <span>View Resume</span>
+    </a>
+  </div>
 </header>
