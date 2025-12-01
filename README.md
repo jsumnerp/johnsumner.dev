@@ -1,12 +1,14 @@
 # johnsumner.dev
 
-My personal portfolio website built with Astro and Tailwind CSS v4. A clean, accessible, and performant showcase of my work, experience, and skills as a full-stack developer.
+[![Deployed on Cloudflare Pages](https://img.shields.io/badge/Deployed%20on-Cloudflare%20Pages-F38020?style=flat&logo=cloudflare&logoColor=white)](https://johnsumner.dev)
+
+My personal portfolio website built with Astro and Tailwind CSS v4. A clean, accessible, and performant showcase of my work, experience, and skills as a full-stack developer. Deployed on Cloudflare Pages.
 
 ## 🎨 Design
 
 - **Mobile-first responsive design** with a two-column desktop layout
 - **Sticky header** on desktop for easy navigation
-- **Custom color palette** using OKLCH color space for consistent, perceptually uniform colors
+- **Custom colour paletter** using OKLCH colour space for consistent, perceptually uniform colours
 - **Custom typography scale** with Inter font family
 - **Accessible components** following WCAG guidelines
 
@@ -36,11 +38,11 @@ My personal portfolio website built with Astro and Tailwind CSS v4. A clean, acc
 
 ## 🎨 Design System
 
-### Colors (OKLCH)
+### Colours (OKLCH)
 
-- **Text**: Light color for main content
+- **Text**: Light colour for main content
 - **Background**: Dark background
-- **Primary**: Purple accent color
+- **Primary**: Purple accent colour
 
 ### Typography
 
@@ -63,6 +65,7 @@ All commands are run from the root of the project:
 - **[Astro](https://astro.build)** - Static site generator
 - **[Tailwind CSS v4](https://tailwindcss.com)** - Utility-first CSS framework
 - **Inter Font** - Google Fonts typography
+- **[Cloudflare Pages](https://pages.cloudflare.com)** - Hosting and deployment
 
 ## ✨ Features
 
@@ -74,3 +77,4 @@ All commands are run from the root of the project:
 - Reusable component architecture
 - Dark theme optimized for readability
 - Performance optimized with Astro's zero-JS by default
+- Continuous deployment via GitHub Actions to Cloudflare Pages
