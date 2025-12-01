@@ -1,0 +1,11 @@
+---
+interface Props {
+  tech: string;
+}
+
+const { tech } = Astro.props;
+---
+
+<span class="px-3 py-1 bg-primary text-text text-sm rounded-full">
+  {tech}
+</span>

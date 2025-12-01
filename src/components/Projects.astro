@@ -1,0 +1,48 @@
+---
+import TechPill from "./TechPill.astro";
+
+// Projects component
+const projects = [
+  {
+    title: "Kiseki",
+    description:
+      "A Job application tracking platform that helps users manage and organize their job applications efficiently.",
+    tech: ["React.js", "TypeScript", "Shadcn", "Golang", "PostgreSQL"],
+    website: "https://kiseki-kappa.vercel.app/",
+  },
+  {
+    title: "johnsumner.dev",
+    description:
+      "Portfolio website showcasing my skills, projects, and experience as a full-stack developer.",
+    tech: ["Astro", "Tailwind CSS"],
+    website: "https://github.com/jsumnerp/johnsumner.dev",
+  },
+];
+---
+
+<section class="space-y-6">
+  <h2 class="text-2xl md:text-3xl font-semibold pl-4">Projects</h2>
+  <div class="grid gap-6 md:grid-cols-1">
+    {
+      projects.map((project) => (
+        <article class="relative group">
+          <a
+            href={project.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block p-4 bg-background rounded-lg hover:bg-slate-900 transition-colors"
+            aria-label={`View ${project.title}`}
+          >
+            <h3 class=" mb-2 font-semibold">{project.title}</h3>
+            <p class="mb-3 leading-relaxed">{project.description}</p>
+            <div class="flex flex-wrap gap-2">
+              {project.tech.map((tech) => (
+                <TechPill tech={tech} />
+              ))}
+            </div>
+          </a>
+        </article>
+      ))
+    }
+  </div>
+</section>

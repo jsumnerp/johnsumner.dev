@@ -1,0 +1,56 @@
+---
+import TechPill from "./TechPill.astro";
+
+// Work Experience component
+const experiences = [
+  {
+    title: "Software Engineer (Full-Stack)",
+    company: "ATG Entertainment",
+    period: "2021 - 2025",
+    description:
+      "Launched digital ticketing with Apple Wallet integration. Built accessible design system with 50+ components. Delivered responsive websites using Next.js and Umbraco CMS. Managed AWS infrastructure with Terraform and Serverless.",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Material UI",
+      "AWS",
+      "Terraform",
+      "React.js",
+      "Node.js",
+    ],
+  },
+  {
+    title: "Software Engineer (Full-Stack)",
+    company: "Saville Assessment",
+    period: "2018 - 2021",
+    description:
+      "Delivered mobile-first aptitude test with accessibility focus. Developed psychometric testing platforms in microservices architecture. Transitioned legacy systems to modern web technologies.",
+    tech: ["React.js", "TypeScript", ".Net"],
+  },
+];
+---
+
+<section class="space-y-6">
+  <h2 class="text-2xl md:text-3xl font-semibold pl-4">Work</h2>
+  <div class="space-y-6">
+    {
+      experiences.map((exp) => (
+        <article class="grid grid-cols-1 md:grid-cols-[20%_80%] gap-2 md:gap-4 p-4">
+          <p class="text-sm hidden md:block">{exp.period}</p>
+          <div>
+            <h3 class="font-semibold mb-1 md:mb-2">
+              {exp.title} - {exp.company}
+            </h3>
+            <p class="text-sm md:hidden mb-2">{exp.period}</p>
+            <p class="leading-relaxed mb-3">{exp.description}</p>
+            <div class="flex flex-wrap gap-2">
+              {exp.tech.map((tech) => (
+                <TechPill tech={tech} />
+              ))}
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>

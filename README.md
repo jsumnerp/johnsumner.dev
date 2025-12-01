@@ -1,46 +1,76 @@
-# Astro Starter Kit: Basics
+# johnsumner.dev
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+My personal portfolio website built with Astro and Tailwind CSS v4. A clean, accessible, and performant showcase of my work, experience, and skills as a full-stack developer.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🎨 Design
 
-## 🚀 Project Structure
+- **Mobile-first responsive design** with a two-column desktop layout
+- **Sticky header** on desktop for easy navigation
+- **Custom color palette** using OKLCH color space for consistent, perceptually uniform colors
+- **Custom typography scale** with Inter font family
+- **Accessible components** following WCAG guidelines
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🏗️ Project Structure
 
 ```text
 /
 ├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
+├── src/
+│   ├── components/
+│   │   ├── About.astro         # About section
+│   │   ├── Header.astro        # Name, title, and social links (sticky on desktop)
+│   │   ├── Projects.astro      # Project showcase with clickable cards
+│   │   ├── WorkExperience.astro # Work history with date column layout
+│   │   ├── SocialLink.astro    # Reusable social media icon links
+│   │   └── TechPill.astro      # Reusable technology badge component
+│   ├── layouts/
+│   │   └── Layout.astro        # Base HTML layout with fonts and meta tags
+│   ├── pages/
+│   │   └── index.astro         # Homepage with grid layout
+│   └── styles/
+│       └── global.css          # Tailwind v4 config with custom theme
+├── astro.config.mjs
+├── tailwind.config.mjs
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🎨 Design System
+
+### Colors (OKLCH)
+
+- **Text**: Light color for main content
+- **Background**: Dark background
+- **Primary**: Purple accent color
+
+### Typography
+
+- **Font**: Inter (400, 600, 700 weights)
+- **Scale**: Custom type scale from 0.75rem to 4.21rem
 
 ## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
+All commands are run from the root of the project:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+| Command        | Action                                       |
+| :------------- | :------------------------------------------- |
+| `pnpm install` | Installs dependencies                        |
+| `pnpm dev`     | Starts local dev server at `localhost:4321`  |
+| `pnpm build`   | Build your production site to `./dist/`      |
+| `pnpm preview` | Preview your build locally, before deploying |
 
-## 👀 Want to learn more?
+## 🚀 Tech Stack
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **[Astro](https://astro.build)** - Static site generator
+- **[Tailwind CSS v4](https://tailwindcss.com)** - Utility-first CSS framework
+- **Inter Font** - Google Fonts typography
+
+## ✨ Features
+
+- Fully responsive design (mobile-first approach)
+- Sticky header on desktop
+- Accessible components with proper ARIA labels
+- Clickable project cards
+- Timeline-style work experience layout
+- Reusable component architecture
+- Dark theme optimized for readability
+- Performance optimized with Astro's zero-JS by default

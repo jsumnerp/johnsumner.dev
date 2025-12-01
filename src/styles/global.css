@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --color-text: oklch(94.24% 0.026 266.61);
+  --color-background: oklch(13.48% 0.038 255.32);
+  --color-primary: oklch(33.60% 0.182 284.80);
+  
+  --font-heading: Inter, system-ui, sans-serif;
+  --font-body: Inter, system-ui, sans-serif;
+
+  --font-size-sm: 0.750rem;
+  --font-size-base: 1rem;
+  --font-size-xl: 1.333rem;
+  --font-size-2xl: 1.777rem;
+  --font-size-3xl: 2.369rem;
+  --font-size-4xl: 3.158rem;
+  --font-size-5xl: 4.210rem;
+}
