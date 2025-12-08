@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 import sitemap from '@astrojs/sitemap';
 
-import compress from 'astro-compress';
+import playformCompress from '@playform/compress';
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,5 +14,5 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  integrations: [sitemap(), compress()]
+  integrations: [sitemap(), playformCompress()]
 });
